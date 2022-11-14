@@ -1,0 +1,19 @@
+/******************************************************************************
+ *
+ * Module: Ultrasonic Sensor
+ *
+ * File Name: ultrasonic.h
+ *
+ * Description: Header file for the Ultrasonic Sensor driver
+ *
+ * Author: Moaz Mohamed
+ *
+ *******************************************************************************/
+
+#ifndef ULTRASONIC_H_
+#define ULTRASONIC_H_
+
+
+
+
+#endif /* ULTRASONIC_H_ */

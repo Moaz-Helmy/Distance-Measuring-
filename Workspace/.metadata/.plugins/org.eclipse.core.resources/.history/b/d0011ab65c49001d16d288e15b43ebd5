@@ -1,0 +1,42 @@
+/******************************************************************************
+ *
+ * Title: 		Distance Measuring Project
+ *
+ * Description: This application uses GPIO, ICU, LCD, Ultrasonic Sensor
+ * 				to measure the distance sensed by the Ultrasonic sensor, then
+ * 				display this distance on the LCD
+ *
+ * Author:		Moaz Mohamed
+ *
+ * Date: 		11/10/2022
+ *
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
+#include "lcd.h"
+#include "ultrasonic.h"
+
+/*********************Program starts here*********************/
+int main(void)
+{
+	/*variable to store the distance*/
+	uint16 distance=0;
+
+	/*Hardware Initializations*/
+	LCD_init();
+	Ultrasonic_init();
+	LCD_displayString("Distance= ");
+
+	/*Program Logic*/
+	while(1)
+	{
+		distance=Ultrasonic_readDistance();
+		LCD_moveCursor(0, 11);
+		LCD_integerToString(distance);
+		LCD_displayString("cm");
+
+	}
+}
+
